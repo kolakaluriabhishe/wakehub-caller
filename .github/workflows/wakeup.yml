@@ -1,0 +1,12 @@
+name: WakeHub Caller
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call WakeHub
+        run: curl https://friendly-wake.lovable.app/
